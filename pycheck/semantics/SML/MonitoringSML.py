@@ -69,14 +69,36 @@ class Monitor:
 
         return res, self
 
+    def monitorizeExp(self,snew,tnew):
+        res = list()
+        self.s.append(snew)
+        self.t.append(tnew)
+        if (tnew - self.t[0]) <= self.T:
+            dh=tnew-self.tf
+            self.tf = tnew
+            self.acc += dh * snew
+            return res, self
+        while(self.tf<tnew):
+            if(self.t[1]-self.t[0]<tnew -self.tf):
+                dh=self.t[1]-self.t[0]
+                self.tf+=dh
+                self.t.pop(0)
+                s0 = self.s.pop(0)
+            else:
+                dh=tnew-self.tf
+                self.t[0]=self.t[0]+dh
+                self.tf=tnew
+                s0=self.s[0]
+            accold = self.acc
+            self.acc += dh * (snew - s0)
+            self.acct += dh
+            T=self.tf-self.t[0]
+            if (accold - self.p*T) * (self.acc - self.p*T)+1E-15 < 0:
+                value = self.acct - abs(self.acc - self.p*T)
+                exit = accold > self.p
+                res.append([value, exit])
 
-
-
-
-
-
-
-
+        return res, self
 
 
 m=Monitor(0,0,0,[],[0],1,0.4)
