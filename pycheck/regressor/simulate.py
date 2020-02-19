@@ -22,7 +22,8 @@ def direct_method_parallel(end_time: int,
     random_values = np.random.rand(1500, len(species))
     totaltime = np.array([])
     while min(simulation_time) < end_time:
-        rates = calculate_rates(coeff, species[:, 0:2])
+        species_ = species[:, 0:2]
+        rates = calculate_rates(coeff, np.int32(species_))
         total_rate = rates.sum(1)
         if min(total_rate) <= 0:
             i = np.where(total_rate <= 0)
@@ -63,5 +64,5 @@ def calculate_rates(coeff, species, res):
 def simulate(x, n):
     species, endTime = direct_method_parallel(125, np.array([x]), np.array([95, 5, 0]),
                                               np.array([[-1, 1, 0], [0, -1, 1]]), n)
-    print(".")
+    print(".", end="")
     return np.sum(np.array([100 <= x <= 120 for x in endTime])) / n

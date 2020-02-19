@@ -69,7 +69,7 @@ class TessellationThreshold1D:
         plt.plot([xs[0], xs[-1]], [self.th, self.th])
         plt.scatter(self.model.getTrainSetX(), self.model.getTrainSetY())
         fig.savefig('threshold1DFigure.png', dpi=90, bbox_inches='tight')
-        # plt.show(block=True)
+        plt.show(block=True)
 
     def BayesianParamterSynthesis(self, xs):
         while True:
