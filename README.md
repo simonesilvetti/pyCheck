@@ -20,6 +20,7 @@ To run it, you need to install python>=3.6 and the following libraries:
 - matplotlib:2.0.2
 - numba:0.35
 - scikit-learn:0.19
+- pyDOE: 0.3.8
 
 (_the last versions should be ok. In any case we have speciefied the version we used_)
 
