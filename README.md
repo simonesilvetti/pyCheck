@@ -4,7 +4,7 @@
 - STL/STREL monitoring
 - Bayesian Statistical Parameter Synthesis for Linear Temporal Properties of Stochastic Models ([TACAS18](https://link.springer.com/chapter/10.1007/978-3-319-89963-3_23))
 
-and other stuff related to the works of 
+and other stuff related to the work of 
 - Simone Silvetti, Esteco Spa.
 - Laura Nenzi, University of Trieste & TU Wien.
 - Luca Bortolussi, University of Trieste.
