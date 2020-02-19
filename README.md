@@ -27,3 +27,6 @@ To run it, you need to install python>=3.6 and the following libraries:
 
 In BenchMarks.py you can find several methods which are reffered to the article. 
 Please recall them in the main method at the end of BenchMarks.py (just comment/uncomment them).
+
+# How to
+See some examples in [this](https://github.com/simonesilvetti/pyCheck/blob/master/pycheck/notebooks/howto.ipynb) notebook
