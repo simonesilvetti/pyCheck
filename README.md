@@ -9,7 +9,7 @@ and other stuff related to the works of
 
 PyCheck ia a partial fork of the project [U-Check](https://link.springer.com/chapter/10.1007/978-3-319-22264-6_6/fulltext.html), plus a conversion from Java to Python.
 
-**How to start** 
+### How to start 
 
 The reference class for the TACAS paper is BenchMarks.py which is contained in the package pycheck/tesselation/. 
 To run it, you need to install python>=3.6 and the following libraries: 
@@ -22,4 +22,4 @@ To run it, you need to install python>=3.6 and the following libraries:
 - scikit-learn:0.19
 
 In BenchMarks.py you can find several methods which are reffered to the article. 
-To run, you have to recall them in the main method at the end of BenchMarks.py (just comment/uncomment them).
+Please recall them in the main method at the end of BenchMarks.py (just comment/uncomment them).
